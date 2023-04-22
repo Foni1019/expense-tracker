@@ -16,7 +16,11 @@ def insert_transaction(category, dateOfTransaction, amount, comment):
         return db.put({"category": category, "dateOfTransaction": dateOfTransaction, "amount": amount, "comment": comment})
 
 def fetch_all():
-        res = db.fetch
+        res = db.fetch()
         return res.items
+
+def fetch_period(period):
+        res = db.fetch({"dateOfTransaction?r": [str(period[0]), str(period[1])]})
+        return res
 
 
