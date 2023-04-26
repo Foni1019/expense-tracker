@@ -12,8 +12,8 @@ deta = Deta(DETA_KEY)
 
 db = deta.Base("test")
 
-def insert_transaction(category, dateOfTransaction, amount, comment):
-        return db.put({"category": category, "dateOfTransaction": dateOfTransaction, "amount": amount, "comment": comment})
+def insert_transaction(category, dateOfTransaction, amount, comment, typeOfTransaction):
+        return db.put({"category": category, "dateOfTransaction": dateOfTransaction, "amount": amount, "comment": comment, "typeOfTransaction": typeOfTransaction})
 
 def fetch_all():
         res = db.fetch()
