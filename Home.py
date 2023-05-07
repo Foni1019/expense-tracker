@@ -13,5 +13,5 @@ st.title(page_title + " " + page_icon)
 st.sidebar.success("Select a page above.")
 
 #------------------------
-image = pil.Image.open('stonks.jpg')
-st.image(image)
+image = pil.Image.open('images/stonks.jpg')
+st.image(image, width=500)

@@ -43,7 +43,7 @@ if submitted:
     income_labels = list(income_totals.keys())
     income_values = list(income_totals.values())
     ax2.pie(income_values, labels=income_labels, autopct=lambda pct: f"{pct:.1f}%\n({pct/100*sum(income_values):.0f} HUF)", textprops={'color':"w"}, colors=sns.color_palette('Set2'))
-    title2 = "Expenses (" + str(sum(income_values)) + " HUF)"
+    title2 = "Incomes (" + str(sum(income_values)) + " HUF)"
     ax2.set_title(title2, fontweight="bold")
 
     # create bar plot for total expenses vs incomes
