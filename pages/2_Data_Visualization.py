@@ -38,11 +38,13 @@ if submitted:
     expense_labels = list(expense_totals.keys())
     expense_values = list(expense_totals.values())
     ax1.pie(expense_values, labels=expense_labels, autopct=lambda pct: f"{pct:.1f}%\n({pct/100*sum(expense_values):.0f} HUF)", textprops={'color':"w"}, colors=sns.color_palette('Set2'))
-    ax1.set_title('Expenses', fontweight="bold")
+    title1 = "Expenses (" + str(sum(expense_values)) + " HUF)"
+    ax1.set_title(title1, fontweight="bold")
     income_labels = list(income_totals.keys())
     income_values = list(income_totals.values())
     ax2.pie(income_values, labels=income_labels, autopct=lambda pct: f"{pct:.1f}%\n({pct/100*sum(income_values):.0f} HUF)", textprops={'color':"w"}, colors=sns.color_palette('Set2'))
-    ax2.set_title('Incomes', fontweight="bold")
+    title2 = "Expenses (" + str(sum(income_values)) + " HUF)"
+    ax2.set_title(title2, fontweight="bold")
 
     # create bar plot for total expenses vs incomes
     fig2, ax3 = plt.subplots(figsize=(6, 4))
@@ -51,7 +53,8 @@ if submitted:
     ax3.set_ylabel('Amount (HUF)')
     ax3.set_facecolor("#0e1117")
 
-    fig.patch.set_facecolor('#0e1117')
+    fig.patch.set_facecolor('#123875')
+    fig2.patch.set_facecolor('#123875')
     plt.rcParams['text.color'] = 'white'
     fig.tight_layout()
     st.pyplot(fig)
