@@ -2,7 +2,7 @@
 My basic expense tracker made with python and Streamlit
 
 ## Functions 
-<img src="images/homepage1.png" alt="Homepage" width="500"/>
+<img src="images/homepage1.png" alt="Homepage" width="1000"/>
 
 ### Data input with categories
 ![Screenshot](images/datainput1.png | width=100)
